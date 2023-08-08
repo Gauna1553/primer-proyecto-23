@@ -4,4 +4,6 @@ export interface TarjetaInicio {
     descripcion: string;
     imagen: string;
     alt: string;
+    valor:string;
+    rareza:string;
 }
