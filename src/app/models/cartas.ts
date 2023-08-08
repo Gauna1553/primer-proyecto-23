@@ -1,4 +1,3 @@
-//Interfaz para tarjetas del inicio
 export interface TarjetaInicio {
     id:number;
     title: string;

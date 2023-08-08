@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TarjetaInicio } from 'src/app/models/modelos' 
+import { TarjetaInicio } from 'src/app/models/cartas';
 
 @Component({
   selector: 'app-inicio',
@@ -12,9 +12,28 @@ export class InicioComponent {
   constructor() {
     this.info = [
       {
-        title: "",
+        id:1,
+        title: "Ninetails V",
         descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus praesentium nisi hic ratione asperiores omnis! Dolor sed nobis saepe nihil iusto quibusdam laborum tempora ipsam, blanditiis incidunt odio ea quae!",
-        imagen: "https://www.infobae.com/new-resizer/nmkaRNlfRtL4nto0kpHPJ0_0eOg=/1200x900/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/ECZFEITLLRHILCTKM2D5WDDUCU.png",
+        imagen: "https://images.wikidexcdn.net/mwuploads/wikidex/c/c4/latest/20200501123520/Ninetales_V_%28Choque_Rebelde_26_TCG%29.png",
+        alt: "",
+        rareza:"",
+        valor:"",
+      },
+      {
+        id:2,
+        title: "Eternatus VMax",
+        descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus praesentium nisi hic ratione asperiores omnis! Dolor sed nobis saepe nihil iusto quibusdam laborum tempora ipsam, blanditiis incidunt odio ea quae!",
+        imagen: "https://images.wikidexcdn.net/mwuploads/wikidex/4/4b/latest/20200806115325/Eternatus_VMAX_%28Oscuridad_Incandescente_117_TCG%29.png",
+        alt: "",
+        rareza:"",
+        valor:"",
+      },
+      {
+        id:3,
+        title: "Mewtwo Colección Clasica",
+        descripcion:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus praesentium nisi hic ratione asperiores omnis! Dolor sed nobis saepe nihil iusto quibusdam laborum tempora ipsam, blanditiis incidunt odio ea quae!",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQle-6pz_-IaW61ah__TRJ0bBd_e8J0oBanoQ&usqp=CAU",
         alt: "",
         rareza:"",
         valor:"",

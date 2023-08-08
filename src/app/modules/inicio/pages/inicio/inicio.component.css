@@ -1,11 +1,10 @@
-/*.container {
+.container {
     display: flex;
     padding: 10px;
 }
 
-.contenido {
-    width: 200px;
-    
-    display: inline-block;
-
-}*/
+.div {
+    padding: 5px;
+    max-width: 360px;
+    max-height: 300px;
+}
