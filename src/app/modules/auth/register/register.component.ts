@@ -26,7 +26,10 @@ export class RegisterComponent {
       contraseña: this.usuarios.contrasena,
     }
     
-    const res = await this.servicioAuth.registrar(credenciales.nombre,credenciales.contraseña).catch(error => {console.log('error =>', error)});
+    const res = await this.servicioAuth.registrar(credenciales.nombre,credenciales.contraseña).then(res => {
+      alert("se agrego un nuevo usuario con exito")
+    })
+    .catch(error => alert("Hubo un error la registrarse: (\n"+error));
     console.log(res);
   }
 }
