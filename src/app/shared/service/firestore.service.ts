@@ -22,7 +22,12 @@ this.usuariosCollection = this.database.collection<Usuario>('usuarios');
         usuario.uid = id;
 
         const resultado = await this.usuariosCollection.doc(id).set(usuario);
-      }catch(){}
+        //muestra el resultado sin problema
+        resolve(resultado);
+      }catch(error){
+        //en caso de que ocurra un error
+        reject(error)
+      }
     })
   }
 }

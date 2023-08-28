@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Usuario } from 'src/app/models/usuario';
+import { FirestoreService } from 'src/app/shared/service/firestore.service';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import { Usuario } from 'src/app/models/usuario';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  hide = true;
+  hide = true; //esto es el input
 
   usuarios: Usuario = {
     uid: '',
@@ -18,7 +19,7 @@ export class RegisterComponent {
 
   uid = '';
 
-  constructor(public servicioAuth: AuthService) {
+  constructor(public servicioAuth: AuthService, public servicioFirestore: FirestoreService) {
   }
 
   //tomamos nuevos registros y tomamos los resultados
