@@ -19,7 +19,9 @@ this.usuariosCollection = this.database.collection<Usuario>('usuarios');
     return new Promise(async(resolve, reject) => {
 
       try{
+        usuario.uid = id;
 
+        const resultado = await this.usuariosCollection.doc(id).set(usuario);
       }catch(){}
     })
   }
