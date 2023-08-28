@@ -14,6 +14,13 @@ this.usuariosCollection = this.database.collection<Usuario>('usuarios');
   }
 
   agregarUsuario(usuario: Usuario, id : string){
+    //RESOLVE: promesa resulta -> similar al then
+    //REJECT: promesa rechazada -> similar al catch
+    return new Promise(async(resolve, reject) => {
 
+      try{
+
+      }catch(){}
+    })
   }
 }
