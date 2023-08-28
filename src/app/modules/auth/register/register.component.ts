@@ -16,6 +16,8 @@ export class RegisterComponent {
     contrasena: ''
   }
 
+  uid = '';
+
   constructor(public servicioAuth: AuthService) {
   }
 
@@ -24,12 +26,15 @@ export class RegisterComponent {
     const credenciales = {
       nombre: this.usuarios.nombre,
       contraseña: this.usuarios.contrasena,
-    }
-    
+    };
+
     const res = await this.servicioAuth.registrar(credenciales.nombre,credenciales.contraseña).then(res => {
       alert("se agrego un nuevo usuario con exito")
     })
     .catch(error => alert("Hubo un error la registrarse: (\n"+error));
-    console.log(res);
-  }
+
+    const uid = await this.servicioAuth.getUid();
+
+    this.usuarios.uid = uid;
+  };
 }
