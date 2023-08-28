@@ -19,6 +19,9 @@ export class RegisterComponent {
 
   uid = '';
 
+  //creamos una nueva colecciónpara usuarios
+  coleccionUsuarios: Usuario[] = [];
+
   constructor(public servicioAuth: AuthService, public servicioFirestore: FirestoreService) {
   }
 
@@ -37,9 +40,23 @@ export class RegisterComponent {
     const uid = await this.servicioAuth.getUid();
 
     this.usuarios.uid = uid;
+
+    // Guarda un nuevo usuario
+    this.guardarUser();
   }
     async guardarUser(){
       this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
+      .then(res => {
+        console.log(this.usuarios)
+      })
+      .catch(error =>{
+        console.log('Error =>', error)
+      })
+    }
+
+    async ngOnInit(){
+      const uid = await this.servicioAuth.getUid();
+      console.log(uid)
     }
   };
 
