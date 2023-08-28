@@ -37,5 +37,9 @@ export class RegisterComponent {
     const uid = await this.servicioAuth.getUid();
 
     this.usuarios.uid = uid;
+  }
+    async guardarUser(){
+      this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
+    }
   };
-}
+
